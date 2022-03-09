@@ -1,0 +1,11 @@
+const GET_REQUEST = 'GET_REQUEST';
+const GET_USERS = 'GET_USERS';
+const GET_ERROR = 'GET_ERROR';
+const UPDATE_USER = 'UPDATE_USER';
+
+export {
+  GET_REQUEST,
+  GET_USERS,
+  GET_ERROR,
+  UPDATE_USER
+}

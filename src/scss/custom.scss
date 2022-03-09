@@ -1,0 +1,71 @@
+@import './variables.scss';
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group {
+  .form-control {
+    padding: 0.5em;
+    margin-bottom: 0.5em ;
+    label {
+      flex: 20%
+    }
+
+    .form-input {
+      flex: 70%
+    }
+  }
+  .error-msg {
+    color: $form-error;
+    text-align: left;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 1em;
+}
+  
+footer {
+    padding: 20px;
+    text-align: center;
+    background: $light-grey;
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    left: 0;
+}
+
+.cursor {
+ cursor: pointer;
+}
+
+.cust-height{
+  height: 170px;
+}
+
+.center-aligned {
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+}
+
+.margin-ry-10 {
+  margin-right: 1em;
+}
+.margin-mb-10 {
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 700px) {
+  .navbar {   
+    flex-direction: column;
+  }
+}

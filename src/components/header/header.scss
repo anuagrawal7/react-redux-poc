@@ -1,0 +1,39 @@
+header {
+    background: rgb(24, 23, 23);
+    .header-logo {
+      flex: 60%;
+      color: #fff;
+      img {
+        width: 30px;
+        padding-top: 10px;
+      }
+
+      span {
+        position: absolute;
+        padding-top: 13px;
+        padding-left: 10px;
+      }
+    }
+
+    .navbar {
+      flex: 40%;
+      display: flex;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .active {
+      background-color: #ddd;
+      color: black !important;
+    }
+  }
