@@ -8,8 +8,10 @@ import {
 import './App.scss';
 import { Header, Footer } from './components';
 import { Loading } from './shared';
+import { addApiInterceptors } from './services/Api';
 
 import configureStore from './store/store';
+addApiInterceptors()
 
 const UsersList = React.lazy(() => import('./components/userList/userList'));
 

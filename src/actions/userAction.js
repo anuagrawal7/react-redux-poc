@@ -1,11 +1,5 @@
-import { GET_USERS, GET_REQUEST, GET_ERROR, UPDATE_USER } from './../constants/constants';
-import axios from "axios";
-
-const fetchUsersRequest = () => {
-  return {
-    type: GET_REQUEST
-  }
-}
+import { GET_USERS, GET_ERROR, UPDATE_USER } from './../constants/constants';
+import { getRequest } from '../services/Api';
 
 const fetchUsersSuccess = (data) => {
   return {
@@ -27,11 +21,11 @@ const updateUser = (data) => {
     payload: data
   }
 }
+
 export const getUsers = () => {
   return (dispatch) => {
-    dispatch(fetchUsersRequest());
-    axios.get(`${process.env.REACT_APP_API}users`).then(response => {
-      dispatch(fetchUsersSuccess(response.data));
+    getRequest(`${process.env.REACT_APP_API}users`).then(response => {
+      dispatch(fetchUsersSuccess(response));
     }).catch(error => {
       const errMsg = error.message;
       dispatch(fetchUsersError(errMsg));

@@ -1,27 +1,19 @@
-import { GET_USERS, GET_REQUEST, GET_ERROR, UPDATE_USER } from "../constants/constants"
+import { GET_USERS, GET_ERROR, UPDATE_USER } from "../constants/constants"
 
 const initialState = {
-  users: [],
-  isLoading: false
+  users: []
 }
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_REQUEST:
-      return {
-        ...state,
-        isLoading: true
-      }
     case GET_USERS:
       return {
         ...state,
-        users: action.payload,
-        isLoading: false
+        users: action.payload
       }
     case GET_ERROR:
       return {
-        ...state,
-        isLoading: false
+        ...state
       }
     default:
       return state
