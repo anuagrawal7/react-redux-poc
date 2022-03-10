@@ -4,8 +4,9 @@ import { Modal, CartDisplay, Button } from './../../shared';
 import UserUpdateForm from '../userUpdateForm';
 import { getUsers, saveUser } from '../../actions/userAction';
 import { fieldsArray } from '../../mockJson/fieldJson';
+import { deepCopy } from '../../utils/helpers';
 
-let formFields = JSON.parse(JSON.stringify(fieldsArray));
+let formFields = deepCopy(fieldsArray);
 
 const UsersList = () => {
   const [isModal, setModal] = useState(false);
